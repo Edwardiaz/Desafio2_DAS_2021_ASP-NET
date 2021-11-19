@@ -1,0 +1,80 @@
+﻿@model Desafio_2_DAS_2021.Models.pelicula
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Delete</title>
+</head>
+<body>
+    <h3>Are you sure you want to delete this?</h3>
+    <div>
+        <h4>pelicula</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.titulo)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.titulo)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.sinopsis)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.sinopsis)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.director)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.director)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.poster_name)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.poster_name)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.poster)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.poster)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.puntuacion)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.puntuacion)
+            </dd>
+    
+        </dl>
+    
+        @using (Html.BeginForm()) {
+            @Html.AntiForgeryToken()
+    
+            <div class="form-actions no-color">
+                <input type="submit" value="Delete" class="btn btn-default" /> |
+                @Html.ActionLink("Back to List", "Index")
+            </div>
+        }
+    </div>
+</body>
+</html>

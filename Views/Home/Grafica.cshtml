@@ -1,0 +1,39 @@
+﻿@{
+    ViewBag.Title = "Contact";
+}
+
+
+<div class="content1">
+    <div class="d"><h4>Calificaciones de Usuarios</h4></div>
+    <div class="p">
+            <div class="canva">
+                <h3>
+                    <canvas id="myChart"></canvas>
+                    <script>
+                        var ctx = document.getElementById("myChart").getContext("2d");
+                        var myChart = new Chart(ctx, {
+                            type: "bar",
+                            data: {
+                                labels: ['col1', 'col2', 'col3', 'col4', 'col5', 'col6'],
+                                datasets: [{
+                                    label: 'Num datos',
+                                    data: [10, 9, 15, 12, 13, 17],
+                                    backgroundColor: ['rgb(66, 134, 244,0.5)', 'rgb(74, 135, 72,0.5)', 'rgb(229, 89, 50,0.5)',
+                                        '#3fb59a', '#9e3695', '#ba9329']
+                                }]
+                            },
+                            options: {
+                                scales: {
+                                    yAxes: [{
+                                        ticks: {
+                                            beginAtZero: true
+                                        }
+                                    }]
+                                }
+                            }
+                        });
+                    </script>
+                </h3>
+            </div>
+    </div>
+</div>

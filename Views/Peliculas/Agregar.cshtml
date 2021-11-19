@@ -1,0 +1,56 @@
+﻿@using Desafio_2_DAS_2021.Models;
+@model PeliculasCLS
+@{
+    ViewBag.Title = "Agregar Pelicula";
+}
+
+    <br />
+<h2>Agregar</h2>
+
+<div class="row">
+    <div class="col-md-6">
+        @using (Html.BeginForm("Agregar", "Peliculas", FormMethod.Post, new { enctype = "multipart/form-data" }))
+        {
+            <div>
+                @Html.LabelFor(p => p.titulo)
+                @Html.TextBoxFor(p => p.titulo, new { @class = "form-control" })
+                @Html.ValidationMessage("titulo", new { @class = "text-danger" })
+            </div>
+
+            <div>
+                @Html.LabelFor(p => p.sinopsis)
+                @Html.TextBoxFor(p => p.sinopsis, new { @class = "form-control" })
+                @Html.ValidationMessage("sinopsis", new { @class = "text-danger" })
+            </div>
+
+            <div>
+                @Html.LabelFor(p => p.director)
+                @Html.TextBoxFor(p => p.director, new { @class = "form-control" })
+                @Html.ValidationMessage("director", new { @class = "text-danger" })
+            </div>
+
+            <div>
+                @Html.LabelFor(p => p.puntuacion)
+                @Html.TextBoxFor(p => p.puntuacion, new { @class = "form-control" })
+                @Html.ValidationMessage("puntuacion", new { @class = "text-danger" })
+            </div>
+
+            <div>
+                @Html.LabelFor(p => p.poster_name)
+                @Html.TextBoxFor(p => p.poster_name, new { @class = "form-control" })
+                @Html.ValidationMessage("Nombre poster", new { @class = "text-danger" })
+            </div>
+
+            <div>
+                @Html.LabelFor(p => p.puntuacion)
+                <input type="file" name="Cargar imagen" />
+                @Html.ValidationMessage("poster", new { @class = "text-danger" })
+            </div>
+
+            <div style="margin:auto">
+                <input type="submit" class="btn btn-primary" value="Enviar" />
+            </div>
+        }
+
+    </div>
+</div>

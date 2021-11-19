@@ -1,0 +1,71 @@
+﻿@model IEnumerable<Desafio_2_DAS_2021.Models.pelicula>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <p>
+        @Html.ActionLink("Create New", "Create")
+    </p>
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.titulo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.sinopsis)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.director)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.poster_name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.poster)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.puntuacion)
+            </th>
+            <th></th>
+        </tr>
+    
+    @foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.titulo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.sinopsis)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.director)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.poster_name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.poster)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.puntuacion)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id=item.id_pelicula }) |
+                @Html.ActionLink("Details", "Details", new { id=item.id_pelicula }) |
+                @Html.ActionLink("Delete", "Delete", new { id=item.id_pelicula })
+            </td>
+        </tr>
+    }
+    
+    </table>
+</body>
+</html>

@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Cine_DAS2021Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="pelicula">
+    <Key>
+      <PropertyRef Name="id_pelicula" />
+    </Key>
+    <Property Name="id_pelicula" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="titulo" Type="varchar" MaxLength="50" />
+    <Property Name="sinopsis" Type="varchar" MaxLength="200" />
+    <Property Name="director" Type="varchar" MaxLength="75" />
+    <Property Name="puntuacion" Type="int" />
+    <Property Name="poster_name" Type="varchar" MaxLength="75" />
+    <Property Name="poster" Type="varbinary(max)" />
+  </EntityType>
+  <EntityContainer Name="Cine_DAS2021ModelStoreContainer">
+    <EntitySet Name="pelicula" EntityType="Self.pelicula" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

@@ -1,0 +1,144 @@
+﻿@using Desafio_2_DAS_2021.Models;
+@* model IEnumerable<Desafio_2_DAS_2021.Models.PeliculasCLS>*@
+@model List<PeliculasCLS>
+
+<div class="gif">
+    <center><img src="~/Content/img3/cin.jpg" alt=""></center>
+</div>
+<main>
+    <section class="Portafolio">
+        <div class="contenedor">
+            <h5 class="titulo">Ranking</h5>
+            <div class="galeria-port">
+
+
+                <div class="imagen-port">
+                    <!--<img src="~/Content/img/Sonic.jpg" alt="">-->
+                    <img src="@Url.Action("getImage", "Home", new { id = Model.iid_pelicula })">
+                    <div class="hover-galeria">
+                        <img src="~/Content/img3/icono1.png" alt="">
+                        <p>Mejor calificadas</p>
+                    </div>
+                </div>
+
+                <!--div class="imagen-port">
+                    <img src="~/Content/img/Sonic.jpg" alt="">
+                    <div class="hover-galeria">
+                        <img src="~/Content/img3/icono1.png" alt="">
+                        <p>Mejor calificadas</p>
+                    </div>
+                </!--div>
+                <div class="imagen-port">
+                    <img src="~/Content/img/Sonic.jpg" alt="">
+                    <div class="hover-galeria">
+                        <img src="~/Content/img3/icono1.png" alt="">
+                        <p></p>
+                    </div>
+                </div>
+                <div class="imagen-port">
+                    <img src="~/Content/img/Sonic.jpg" alt="">
+                    <div class="hover-galeria">
+                        <img src="~/Content/img3/icono1.png" alt="">
+                        <p>Mejores Calificadas</p>
+                    </div>
+                </div>
+                <div class="imagen-port">
+                    <img src="~/Content/img/Sonic.jpg" alt="">
+                    <div class="hover-galeria">
+                        <img src="~/Content/img3/icono1.png" alt="">
+                        <p>Nuestros Productos</p>
+                    </div>
+                </div>
+                <div class="imagen-port">
+                    <img src="~/Content/img/Sonic.jpg" alt="">
+                    <div class="hover-galeria">
+                        <img src="~/Content/img3/icono1.png" alt="">
+                        <p>Nuestros Productos</p>
+                    </div>
+                </div>
+                <div class="imagen-port">
+                    <img src="~/Content/img/Sonic.jpg" alt="">
+                    <div class="hover-galeria">
+                        <img src="~/Content/img3/icono1.png" alt="">
+                        <p>Nuestros Productos</p>
+                    </div>
+                </div>
+                <div class="imagen-port">
+                    <img src="~/Content/img/Sonic.jpg" alt="">
+                    <div class="hover-galeria">
+                        <img src="~/Content/img3/icono1.png" alt="">
+                        <p>Nuestros Productos</p>
+                    </div>
+                </div>
+                <div-- class="imagen-port">
+                    <img src="~/Content/img/Sonic.jpg" alt="">
+                    <div class="hover-galeria">
+                        <img src="~/Content/img3/icono1.png" alt="">
+                        <p>Nuestros Productos</p>
+                    </div>
+                </div-->
+            </div>
+        </div>
+    </section>
+    <!--section-- class="clientes contenedor">
+        <h5 class="titulo">Las mas votadas</h5>
+        <div class="cards">
+            <div class="card">
+                <img src="~/Content/img/Sonic.jpg" alt="">
+                <div class="contenido-texto-card">
+                    <h4>Mixto</h4>
+                    <p>Lo mejor de ambos mundos: caramelo y salado.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="~/Content/img/Sonic.jpg" alt="">
+                <div class="contenido-texto-card">
+                    <h4>Pop Corn miel</h4>
+                    <p>Disfruta de un sabor único en tu paladar.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="~/Content/img/Sonic.jpg" alt="">
+                <div class="contenido-texto-card">
+                    <h4>Pop Corn Oreo</h4>
+                    <p>Prueba la nueva combinación entre oreo y las palomitas</p>
+                </div>
+            </div>
+        </div>
+    </!--section-->
+    <!--section-- class="about-services">
+        <div class="contenedor">
+            <h5 class="titulo">23</h5>
+            <div class="servicio-cont">
+                <div class="servicio-ind">
+                    <h3>Cine Libertad</h3>
+                    <img src="~/Content/img3/4.jpg" alt="">
+                    <h3>Ubicacion</h3>
+                    <p>
+                        <h6>6a Avenida sur, y 4a calle oriente, San Salvador, El Salvador, C.A.</h6>
+                    </p>
+                </div>
+                <div class="servicio-ind">
+                    <h3>Dulcería</h3>
+                    <img src="~/Content/img3/dulceria.jpg" alt="">
+                    <h3>Servicio</h3>
+                    <p>
+                        <h6>Disponemos de una alta variedad en caramelos y comida, para tu deleite personal.</h6>
+                    </p>
+                </div>
+                <div class="servicio-ind">
+                    <h3>Establecimiento</h3>
+                    <img src="~/Content/img3/Establecimiento.jpeg" alt="">
+                    <h3>Salas</h3>
+                    <p>
+                        <h6>
+                            Para su mayor comodidad disponemos de salas enumeradas y amplias, para que puedas disfrutar
+                            del séptimo arte.
+                        </h6>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </!--section-->
+</main>

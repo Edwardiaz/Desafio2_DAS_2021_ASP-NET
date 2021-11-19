@@ -1,0 +1,37 @@
+﻿@using Desafio_2_DAS_2021.Models;
+@model List<PeliculasCLS>
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+@Html.ActionLink("Agregar", "Agregar", "Pelicula", null, new { @class = "btn btn-primary" })
+
+<table class="table table-bordered table-hover">
+    <thead>
+        <tr>
+            <td>@Html.LabelFor(p => Model[0].iid_pelicula)</td>
+            <td>@Html.LabelFor(p => Model[0].titulo)</td>
+            <td>@Html.LabelFor(p => Model[0].sinopsis)</td>
+            <td>@Html.LabelFor(p => Model[0].puntuacion)</td>
+            <td>@Html.LabelFor(p => Model[0].poster)</td>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+        <tr>
+            <td>@item.iid_pelicula</td>
+            <td>@item.titulo</td>
+            <td>@item.sinopsis</td>
+            <td>@item.puntuacion</td>
+            <td><img width="100" src="@Url.Action("getImage", "Peliculas", new { id = item.iid_pelicula })"></td>
+        </tr>
+        }
+    </tbody>
+</table>
+
+
+
+

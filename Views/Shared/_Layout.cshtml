@@ -1,0 +1,92 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - Cine Libertad</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="~/Content/css/style.css">
+    <link rel="stylesheet" href="~/Content/css/estilo.css">
+    <link rel="stylesheet" href="~/Content/css2.3/style.css">
+    <link rel="stylesheet" href="~/Content/css3/style.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.6.0/chart.min.js"
+            integrity="sha512-GMGzUEevhWh8Tc/njS0bDpwgxdCJLQBWG3Z2Ct+JGOpVnEmjvNx6ts4v6A2XJf1HOrtOsfhv3hBKpK9kE5z8AQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <nav>
+            <div class="logo"><a href="/"><img src="~/Content/img/logocine.jpg" class="logo-brand" alt="logo"></a></div>
+            <input type="checkbox" id="click">
+            <label for="click" class="menu-btn">
+                <i class="fas fa-bars"></i>
+            </label>
+            <ul class="nav navbar-nav">
+                <!--Label que veremos en la vista, Pagina que veremos, Controlador-->
+                <li>@Html.ActionLink("Principal", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })</li>
+                <li>@Html.ActionLink("Mostrar Peliculas", "Show", "Home", new { area = "" }, new { @class = "navbar-brand" })</li>
+                <li>@Html.ActionLink("Ranking", "Grafica", "Home", new { area = "" }, new { @class = "navbar-brand" })</li>
+                <li>@Html.ActionLink("Agregar", "Agregar", "Peliculas", new { area = "" }, new { @class = "navbar-brand" })</li>
+            </ul>
+        </nav>
+
+
+    </div>
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            <div class="container text-center">
+                <p href="link" class="bootstrapcdn">Copyright &copy; DAS 2021</p><br>
+            </div>
+            <center>
+                <div class="wrapper">
+                    <a href="https://www.facebook.com/ExCinelibertad" target="blank">
+                        <div class="icon facebook">
+                            <div class="tooltip">
+                                Facebook
+                            </div>
+                            <span><i class="fab fa-facebook-f"></i></span>
+                        </div>
+                    </a>
+                    <a href="Contactanos.html">
+                        <div class="icon twitter">
+                            <div class="tooltip">
+                                Ubicación
+                            </div>
+                            <span><i class="fas fa-map-marker-alt"></i></span>
+                        </div>
+                    </a>
+                    <a href="Contactanos.html">
+                        <div class="icon instagram">
+                            <div class="tooltip">
+                                Teléfono
+                            </div>
+                            <span><i class="fas fa-phone-alt"></i></span>
+                        </div>
+                    </a>
+                    <a href="Contactanos.html">
+                        <div class="icon youtube">
+                            <div class="tooltip">
+                                Contáctanos
+                            </div>
+                            <span><i class="fas fa-envelope"></i></span>
+                        </div>
+                    </a>
+                </div>
+            </center>
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

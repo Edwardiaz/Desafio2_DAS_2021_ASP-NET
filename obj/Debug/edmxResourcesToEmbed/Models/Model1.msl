@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Cine_DAS2021ModelStoreContainer" CdmEntityContainer="Cine_DAS2021Entities">
+    <EntitySetMapping Name="peliculas">
+      <EntityTypeMapping TypeName="Cine_DAS2021Model.pelicula">
+        <MappingFragment StoreEntitySet="pelicula">
+          <ScalarProperty Name="puntuacion" ColumnName="puntuacion" />
+          <ScalarProperty Name="id_pelicula" ColumnName="id_pelicula" />
+          <ScalarProperty Name="titulo" ColumnName="titulo" />
+          <ScalarProperty Name="sinopsis" ColumnName="sinopsis" />
+          <ScalarProperty Name="director" ColumnName="director" />
+          <ScalarProperty Name="poster_name" ColumnName="poster_name" />
+          <ScalarProperty Name="poster" ColumnName="poster" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

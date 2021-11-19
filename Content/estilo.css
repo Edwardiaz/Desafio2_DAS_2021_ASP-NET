@@ -1,0 +1,29 @@
+.foto {
+  font-family: ;
+  position: relative;
+  overflow: hidden;
+  margin: 10px;
+  min-width: 100px;
+  max-width: 200px;
+  width: 20%;
+  color: #141414;
+  text-align: ;
+  line-height: 1.4em;
+  font-size: 16px;
+}
+.foto * {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all 0.35s ease;
+  transition: all 0.35s ease;
+}
+.foto img {
+  max-width: 
+  vertical-align:
+}
+
+
+
+
+
+
