@@ -31,7 +31,7 @@
             <ul class="nav navbar-nav">
                 <!--Label que veremos en la vista, Pagina que veremos, Controlador-->
                 <li>@Html.ActionLink("Principal", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })</li>
-                <li>@Html.ActionLink("Mostrar Peliculas", "Show", "Home", new { area = "" }, new { @class = "navbar-brand" })</li>
+                <li>@Html.ActionLink("Mostrar Peliculas", "Index", "Peliculas", new { area = "" }, new { @class = "navbar-brand" })</li>
                 <li>@Html.ActionLink("Ranking", "Grafica", "Home", new { area = "" }, new { @class = "navbar-brand" })</li>
                 <li>@Html.ActionLink("Agregar", "Agregar", "Peliculas", new { area = "" }, new { @class = "navbar-brand" })</li>
             </ul>

@@ -295,11 +295,6 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Peliculas\Index.cshtml" />
     <Content Include="Views\Peliculas\Agregar.cshtml" />
-    <Content Include="Views\peliculas1\Create.cshtml" />
-    <Content Include="Views\peliculas1\Delete.cshtml" />
-    <Content Include="Views\peliculas1\Details.cshtml" />
-    <Content Include="Views\peliculas1\Edit.cshtml" />
-    <Content Include="Views\peliculas1\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
