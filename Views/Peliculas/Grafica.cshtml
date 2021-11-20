@@ -1,0 +1,60 @@
+﻿@using Desafio_2_DAS_2021.Models;
+@model List<PeliculasCLS>
+@{
+    ViewBag.Title = "Ranking";
+}
+
+
+<div class="content1">
+    <div class="d"><h4>Calificaciones de Usuarios</h4></div>
+    <div class="p">
+        <div class="canva">
+
+            <canvas id="myChart"></canvas>
+            @foreach (var item in Model)
+            {
+                <input class="hidden" id="titulo" value=@item.titulo>
+                <input class="hidden" id="puntuacion" value=@item.puntuacion>
+            }
+        <script>
+
+                var ctx = document.getElementById("myChart").getContext("2d");
+
+                //foreach (var item in Model)
+                //{
+                    /*Array puntuacion;
+                    puntuacion.add(item.puntuacion);
+                    Array titulo;
+                    titulo.add(item.titulo);*/
+                    //var puntos = [puntuacion];
+                    //var ti = [titulo];
+
+                    //item.puntuacion;
+                //}
+
+                var myChart = new Chart(ctx, {
+                    type: "bar",
+                    data: {
+                        labels: ["@Model[0].titulo", "@Model[1].titulo", "@Model[2].titulo", "@Model[3].titulo", "@Model[4].titulo"],
+                        datasets: [{
+                            label: 'Num datos',
+                            data: [@Model[0].puntuacion, @Model[1].puntuacion, @Model[2].puntuacion, @Model[3].puntuacion, @Model[4].puntuacion],
+                            backgroundColor: ['rgb(66, 134, 244,0.5)', 'rgb(74, 135, 72,0.5)', 'rgb(229, 89, 50,0.5)',
+                                '#3fb59a', '#9e3695', '#ba9329']
+                        }]
+                    },
+                    options: {
+                        scales: {
+                            yAxes: [{
+                                ticks: {
+                                    beginAtZero: true
+                                }
+                            }]
+                        }
+                    }
+                });
+        </script>
+
+        </div>
+    </div>
+</div>

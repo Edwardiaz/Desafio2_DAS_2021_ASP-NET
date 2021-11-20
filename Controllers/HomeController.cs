@@ -16,7 +16,23 @@ namespace Desafio_2_DAS_2021.Controllers
         private Cine_DAS2021Entities ddbb = new Cine_DAS2021Entities();
         public ActionResult Index()
         {
-            return View();
+            List<PeliculasCLS> listaPeliculas = null;
+
+            using (var bd = new Cine_DAS2021Entities())
+            {
+                listaPeliculas = (from pelicula in bd.peliculas
+                                  select new PeliculasCLS
+                                  {
+                                      iid_pelicula = pelicula.id_pelicula,
+                                      titulo = pelicula.titulo,
+                                      sinopsis = pelicula.sinopsis,
+                                      director = pelicula.director,
+                                      puntuacion = pelicula.puntuacion,
+                                      poster_name = pelicula.poster_name,
+                                  }
+                                  ).ToList();
+            }
+            return View(listaPeliculas);
         }
 
         public ActionResult Show()
@@ -36,11 +52,11 @@ namespace Desafio_2_DAS_2021.Controllers
             pelicula peliculas = ddbb.peliculas.Find(id);
             byte[] byteImage = peliculas.poster;
 
-            MemoryStream memoryStream = new MemoryStream(byteImage); //nos crea una emmoria auxiliar
+            MemoryStream memoryStream = new MemoryStream(byteImage); 
             Image image = Image.FromStream(memoryStream);
 
             memoryStream = new MemoryStream();
-            image.Save(memoryStream, ImageFormat.Jpeg); //valido el formato que voy a cargar de la imagen
+            image.Save(memoryStream, ImageFormat.Jpeg); 
             memoryStream.Position = 0;
 
             return File(memoryStream, "image/Jpg");

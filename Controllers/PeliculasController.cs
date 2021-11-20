@@ -16,21 +16,11 @@ namespace Desafio_2_DAS_2021.Controllers
     public class PeliculasController : Controller
     {
         private Cine_DAS2021Entities ddbb = new Cine_DAS2021Entities();
-        // private Cine_DAS2021Entities db = new Cine_DAS2021Entities();
+
         // GET: Peliculas
         public ActionResult Index()
         {
             List<PeliculasCLS> listaPeliculas = null;
-
-/*          pelicula peliculas = ddbb.peliculas.Find(id);
-            byte[] byteImage = peliculas.poster;
-
-            MemoryStream memoryStream = new MemoryStream(byteImage); //nos crea una emmoria auxiliar
-            Image image = Image.FromStream(memoryStream);
-
-            memoryStream = new MemoryStream();
-            image.Save(memoryStream, ImageFormat.Jpeg);
-            memoryStream.Position = 0;*/
 
             using (var bd = new Cine_DAS2021Entities())
             {
@@ -41,8 +31,8 @@ namespace Desafio_2_DAS_2021.Controllers
                                       titulo = pelicula.titulo,
                                       sinopsis = pelicula.sinopsis,
                                       director = pelicula.director,
+                                      puntuacion = pelicula.puntuacion,
                                       poster_name = pelicula.poster_name,
-                                      //poster = File(memoryStream, "image/Jpg"),
                                   }
                                   ).ToList();
             }
@@ -82,7 +72,7 @@ namespace Desafio_2_DAS_2021.Controllers
             }
             return RedirectToAction("Index");
         }
-
+        //Metodo para cargar la imagen
         public ActionResult getImage(int? id)
         {
             pelicula peliculas = ddbb.peliculas.Find(id);
@@ -96,6 +86,24 @@ namespace Desafio_2_DAS_2021.Controllers
             memoryStream.Position = 0;
 
             return File(memoryStream, "image/Jpg");
+        }
+        //metodo para llenar el modelo con la data que necesito para la grafica
+        public ActionResult Grafica()
+        {
+            List<PeliculasCLS> listaPeliculas = null;
+
+            using (var bd = new Cine_DAS2021Entities())
+            {
+                listaPeliculas = (from pelicula in bd.peliculas
+                                  select new PeliculasCLS
+                                  {
+                                    iid_pelicula = pelicula.id_pelicula,
+                                    titulo = pelicula.titulo,
+                                    puntuacion = pelicula.puntuacion,   
+                                  }
+                                  ).ToList();
+            }
+            return View(listaPeliculas);
         }
 
     }

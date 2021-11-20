@@ -159,7 +159,6 @@ C:\Users\jorge\Documents\GitHub\Desafio2_DAS_2021_ASP-NET\bin\System.Web.WebPage
 C:\Users\jorge\Documents\GitHub\Desafio2_DAS_2021_ASP-NET\bin\Newtonsoft.Json.xml
 C:\Users\jorge\Documents\GitHub\Desafio2_DAS_2021_ASP-NET\bin\Antlr3.Runtime.pdb
 C:\Users\jorge\Documents\GitHub\Desafio2_DAS_2021_ASP-NET\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-C:\Users\jorge\Documents\GitHub\Desafio2_DAS_2021_ASP-NET\obj\Debug\Desafio_2_DAS_2021.csprojAssemblyReference.cache
 C:\Users\jorge\Documents\GitHub\Desafio2_DAS_2021_ASP-NET\obj\Debug\Desafio_2_DAS_2021.csproj.CoreCompileInputs.cache
 C:\Users\jorge\Documents\GitHub\Desafio2_DAS_2021_ASP-NET\obj\Debug\Desafio_2_DAS_2021.csproj.CopyComplete
 C:\Users\jorge\Documents\GitHub\Desafio2_DAS_2021_ASP-NET\obj\Debug\Desafio_2_DAS_2021.dll

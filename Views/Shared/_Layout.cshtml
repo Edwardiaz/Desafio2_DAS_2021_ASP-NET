@@ -32,7 +32,7 @@
                 <!--Label que veremos en la vista, Pagina que veremos, Controlador-->
                 <li>@Html.ActionLink("Principal", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })</li>
                 <li>@Html.ActionLink("Mostrar Peliculas", "Index", "Peliculas", new { area = "" }, new { @class = "navbar-brand" })</li>
-                <li>@Html.ActionLink("Ranking", "Grafica", "Home", new { area = "" }, new { @class = "navbar-brand" })</li>
+                <li>@Html.ActionLink("Ranking", "Grafica", "Peliculas", new { area = "" }, new { @class = "navbar-brand" })</li>
                 <li>@Html.ActionLink("Agregar", "Agregar", "Peliculas", new { area = "" }, new { @class = "navbar-brand" })</li>
             </ul>
         </nav>
@@ -40,8 +40,12 @@
 
     </div>
     <div class="container body-content">
+        <br />
+        <br />
+        <br />
         @RenderBody()
-        <hr />
+        <br />
+        <br />
         <footer>
             <div class="container text-center">
                 <p href="link" class="bootstrapcdn">Copyright &copy; DAS 2021</p><br>

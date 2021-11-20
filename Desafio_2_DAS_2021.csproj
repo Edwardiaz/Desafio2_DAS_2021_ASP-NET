@@ -295,6 +295,7 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Peliculas\Index.cshtml" />
     <Content Include="Views\Peliculas\Agregar.cshtml" />
+    <Content Include="Views\Peliculas\Grafica.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

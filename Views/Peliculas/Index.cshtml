@@ -3,35 +3,41 @@
 @{
     ViewBag.Title = "Index";
 }
+<br />
+<br />
+<div class="gif">
+    <center><img src="~/Content/img3/cin.jpg" alt=""></center>
+</div>
+<main>
+    @Html.ActionLink("Agregar", "Agregar", "Peliculas", null, new { @class = "btn btn-primary" })
+    <section class="Portafolio">
+        <div class="contenedor">
+            <h5 class="titulo">Ranking</h5>
+            <div class="galeria-port">
+                <br />
+                <div class="imagen-port">
+                    @foreach (var item in Model)
+                    {
+                        <!--<img src="~/Content/img/Sonic.jpg" alt="">-->
+                        <img width="300" src="@Url.Action("getImage", "Peliculas", new { id = item.iid_pelicula })" alt=""/>
+                        <div class="hover-galeria">
+                            <img src="~/Content/img3/icono1.png" alt="">
+                            <p>
+                                @item.titulo
+                            </p>
+                            <p>
+                                @item.sinopsis
+                            </p>
+                            <p>
+                                @item.puntuacion
+                            </p>
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+    </section>
 
-<h2>Index</h2>
-
-@Html.ActionLink("Agregar", "Agregar", "Pelicula", null, new { @class = "btn btn-primary" })
-
-<table class="table table-bordered table-hover">
-    <thead>
-        <tr>
-            <td>@Html.LabelFor(p => Model[0].iid_pelicula)</td>
-            <td>@Html.LabelFor(p => Model[0].titulo)</td>
-            <td>@Html.LabelFor(p => Model[0].sinopsis)</td>
-            <td>@Html.LabelFor(p => Model[0].puntuacion)</td>
-            <td>@Html.LabelFor(p => Model[0].poster)</td>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var item in Model)
-        {
-        <tr>
-            <td>@item.iid_pelicula</td>
-            <td>@item.titulo</td>
-            <td>@item.sinopsis</td>
-            <td>@item.puntuacion</td>
-            <td><img width="100" src="@Url.Action("getImage", "Peliculas", new { id = item.iid_pelicula })"></td>
-        </tr>
-        }
-    </tbody>
-</table>
-
-
+</main>
 
 

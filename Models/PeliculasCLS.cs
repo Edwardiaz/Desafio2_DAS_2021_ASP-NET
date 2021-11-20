@@ -20,7 +20,7 @@ namespace Desafio_2_DAS_2021.Models
         [Display(Name = "Director")]
         public string director { get; set; }
         [Display(Name = "Puntuacion")]
-        public int puntuacion { get; set; }
+        public int? puntuacion { get; set; }
         [Display(Name = "Nombre poster")]
         public string poster_name { get; set; }
         [Display(Name = "Poster")]
